@@ -10,7 +10,7 @@ export type InterestProps = {
   }
 }
 
-const Interest: React.FC<InterestProps> = ({ interest, email }) => {
+const Interest= ({ interest, email }) => {
   const interestMutation = api.interest.togglePublish.useMutation()
   const [published, setPublished] = React.useState<boolean>(interest.published)
   const authorName = interest.author ? interest.author.name : 'Unknown author'
